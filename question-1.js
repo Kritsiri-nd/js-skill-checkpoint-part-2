@@ -10,3 +10,6 @@ const techcoolPeople = [
 ];
 
 // เริ่มเขียนโค้ดตรงนี้
+const combinePeople = [...techupPeople,...techcoolPeople];
+const peopleUnder20 = combinePeople.filter(data => data.age < 20);
+console.log(peopleUnder20);
