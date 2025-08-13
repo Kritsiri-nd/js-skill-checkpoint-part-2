@@ -7,10 +7,14 @@ function filterName (data) {
 };
 
 async function asyncchronousFuction() {
-  const data = await getUser();
-  const coonvertData = await data.json();
-  const nameMoreThan17 = await filterName(coonvertData);
-  console.log(nameMoreThan17);
+  try {
+    const data = await getUser();
+    const coonvertData = await data.json();
+    const nameMoreThan17 = await filterName(coonvertData);
+    console.log(nameMoreThan17);
+  } catch (error) {
+    console.error('Function Error', error);
+  }
 }
 
 asyncchronousFuction();
